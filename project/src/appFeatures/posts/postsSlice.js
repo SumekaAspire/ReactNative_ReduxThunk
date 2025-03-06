@@ -1,4 +1,4 @@
-import {creatSlice} from "@reduxjs/toolkit";
+import {createSlice} from "@reduxjs/toolkit";
 
 
 const initialState = [
@@ -15,7 +15,7 @@ const initialState = [
     }
 ]
 
-const postsSlice = creatSlice({
+const postsSlice = createSlice({
     name:'posts',
     initialState,
     reducers:{
@@ -27,4 +27,5 @@ const postsSlice = creatSlice({
 
 //here export actions and reducers
 
+export const selectAllPosts = (state)=> state.posts;// if any changes in future, do changes in slice file only, it automatically upadate.
 export default postsSlice.reducer;

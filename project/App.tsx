@@ -12,6 +12,9 @@ import { Provider } from 'react-redux';
 import Counter from './src/features/counter/Counter';
 import Animated from './src/animations/LayoutAnimations';
 import Apps from './src/animations/AnimationApi';
+import Buttons from './src/component/Button';
+import Touchables from './src/component/Touchables';
+import PostsList from './src/appFeatures/posts/PostsList';
 
 const App =() =>{
   return(
@@ -20,9 +23,11 @@ const App =() =>{
   //  </Provider>
   // <Animated/>
   // <Apps/>
+  // <Buttons/>
+  // <Touchables/>
   
   <Provider store={store}>
-
+    <PostsList/>
   </Provider>
   )
 }
