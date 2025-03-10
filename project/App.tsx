@@ -15,6 +15,8 @@ import Apps from './src/animations/AnimationApi';
 import Buttons from './src/component/Button';
 import Touchables from './src/component/Touchables';
 import PostsList from './src/appFeatures/posts/PostsList';
+import Profile from './src/screens/ProfileScreen';
+import PlatformModule from './src/component/PlatformModule';
 
 const App =() =>{
   return(
@@ -23,12 +25,15 @@ const App =() =>{
   //  </Provider>
   // <Animated/>
   // <Apps/>
-  // <Buttons/>
+ // <Buttons/>
   // <Touchables/>
   
-  <Provider store={store}>
-    <PostsList/>
-  </Provider>
+//<Profile />
+<PlatformModule />
+
+  // <Provider store={store}>
+  //   <PostsList/>
+  // </Provider>
   )
 }
 

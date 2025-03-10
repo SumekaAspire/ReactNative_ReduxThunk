@@ -1,7 +1,8 @@
 //use rafce for syntax of the file
-import React, { use } from 'react'
-import { useSelector,Text, View } from 'react-redux'
+import React from 'react'
+import { useSelector} from 'react-redux'
 import { selectAllPosts } from './postsSlice'
+import { Text, View } from 'react-native'; 
 
 
 const PostsList = () => {
