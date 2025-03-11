@@ -12,6 +12,12 @@ import { Provider } from 'react-redux';
 import Counter from './src/features/counter/Counter';
 import Animated from './src/animations/LayoutAnimations';
 import Apps from './src/animations/AnimationApi';
+import Buttons from './src/component/Button';
+import Touchables from './src/component/Touchables';
+import PostsList from './src/appFeatures/posts/PostsList';
+import Profile from './src/screens/ProfileScreen';
+import PlatformModule from './src/component/PlatformModule';
+import AddPostForm from './src/appFeatures/posts/AddPostForm';
 
 const App =() =>{
   return(
@@ -20,9 +26,15 @@ const App =() =>{
   //  </Provider>
   // <Animated/>
   // <Apps/>
+  // <Buttons/> 
+  // <Touchables/>
   
-  <Provider store={store}>
+  //<Profile /> //unit testing JEST
+  //<PlatformModule /> //platform modules
 
+  <Provider store={store}>
+    <AddPostForm/>
+    <PostsList/>
   </Provider>
   )
 }
