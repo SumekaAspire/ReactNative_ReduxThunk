@@ -9,8 +9,8 @@ import {
 } from 'react-native';
 
 const Icons = {
-  twitter: require('../assets/twitter.png'),
-  instagram: require('../assets/instagram.png'),
+  twitter: require('../assets/image/twitter.png'),
+  instagram: require('../assets/image/instagram.png'),
 };
 
 const SocialLinks = ({ label, type, link }) => {

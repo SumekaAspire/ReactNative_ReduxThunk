@@ -1,5 +1,5 @@
 import React from "react";
-import { View,Alert,StyleSheet, Button } from "react-native";
+import { View,Alert,StyleSheet, Button,Text } from "react-native";
 
 
 
@@ -20,6 +20,7 @@ const Buttons= ()=>{
           <Button onPress={pressed} title='Next'/>
 
           </View>
+          <Text style={styles.text}>good to see.</Text>
         </View>
     )
 }
@@ -39,6 +40,9 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
       },
+      text:{
+        fontFamily:'Roboto_Condensed-Bold'
+      }
 })
 
 export default Buttons;

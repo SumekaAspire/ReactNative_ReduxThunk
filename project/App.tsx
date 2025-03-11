@@ -17,6 +17,7 @@ import Touchables from './src/component/Touchables';
 import PostsList from './src/appFeatures/posts/PostsList';
 import Profile from './src/screens/ProfileScreen';
 import PlatformModule from './src/component/PlatformModule';
+import AddPostForm from './src/appFeatures/posts/AddPostForm';
 
 const App =() =>{
   return(
@@ -25,15 +26,16 @@ const App =() =>{
   //  </Provider>
   // <Animated/>
   // <Apps/>
- // <Buttons/>
+  // <Buttons/> 
   // <Touchables/>
   
-//<Profile />
-<PlatformModule />
+  //<Profile /> //unit testing JEST
+  //<PlatformModule /> //platform modules
 
-  // <Provider store={store}>
-  //   <PostsList/>
-  // </Provider>
+  <Provider store={store}>
+    <AddPostForm/>
+    <PostsList/>
+  </Provider>
   )
 }
 
