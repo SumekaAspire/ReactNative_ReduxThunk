@@ -5,12 +5,15 @@ import { selectAllPosts } from './postsSlice'
 import { StyleSheet, Text, View } from 'react-native'; 
 import PostAuthor from './PostAuthor';
 import TimeAgo from './TimeAgo';
+import ReactionButtons from './ReactionButtons';
 
 const PostsList = () => {
 
    // const posts = useSelector((state)=> state.posts)// state.posts - here if we make changes means can update,but if 10 components means how it be updated, so use a variable
    const posts = useSelector(selectAllPosts)
-    const renderedposts = posts.map(post =>(
+   const orderedPosts = posts.slice().sort((a,b)=> b.date.localeCompare(a.date))// created posts are displayed first
+    // const renderedposts = posts.map(post =>(
+      const renderedposts = orderedPosts.map(post =>(
       <View key={post.id} style = {styles.posts}>
         <Text style = {styles.postTitle}>{post.title}</Text>
         <Text style = {styles.postContent}>{post.content.substring(0, 100)}</Text>
@@ -18,6 +21,7 @@ const PostsList = () => {
           <PostAuthor userId={post.userId}/>
           <TimeAgo timestamp={post.date}/>
         </View>
+        <ReactionButtons post={post}/>
       </View>
     ))
   return (
@@ -61,6 +65,8 @@ const styles = StyleSheet.create({
     flexDirection:'row',
     justifyContent: 'space-between',
 
-  }
+  },
+ 
+ 
 })
-export default PostsList
+export default PostsList;
