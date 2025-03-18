@@ -18,6 +18,7 @@ import PostsList from './src/appFeatures/posts/PostsList';
 import Profile from './src/screens/ProfileScreen';
 import PlatformModule from './src/component/PlatformModule';
 import AddPostForm from './src/appFeatures/posts/AddPostForm';
+import Networking from './src/component/Networking/Networking';
 
 const App =() =>{
   return(
@@ -32,10 +33,13 @@ const App =() =>{
   //<Profile /> //unit testing JEST
   //<PlatformModule /> //platform modules
 
-  <Provider store={store}>
-    <AddPostForm/>
-    <PostsList/>
-  </Provider>
+  // <Provider store={store}>
+  //   <AddPostForm/>
+  //   <PostsList/>
+  // </Provider>
+
+  <Networking />
+ //<HooksConcepts />
   )
 }
 
