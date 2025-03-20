@@ -19,6 +19,8 @@ import Profile from './src/screens/ProfileScreen';
 import PlatformModule from './src/component/PlatformModule';
 import AddPostForm from './src/appFeatures/posts/AddPostForm';
 import Networking from './src/component/Networking/Networking';
+import UseState from './src/component/Hooks/UseState';
+import HooksConcepts from './src/component/Hooks/HooksConcepts';
 
 const App =() =>{
   return(
@@ -38,8 +40,8 @@ const App =() =>{
   //   <PostsList/>
   // </Provider>
 
-  <Networking />
- //<HooksConcepts />
+  //<Networking />
+  <HooksConcepts/>
   )
 }
 
