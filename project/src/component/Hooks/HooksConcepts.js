@@ -1,11 +1,14 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, SafeAreaView} from 'react-native';
 import UseEffect from './UseEffect';
 import UseState from './UseState';
 import UseCallback from './UseCallback';
 import UseMemo from './UseMemo';
 import ItemFilter from './UseMemo';
 import FibanocciSeries from './UseMemo';
+import ThemeProvider from './ThemeProvider';
+import UseContext from './UseContext';
+
 
 
 const HooksConcepts =()=>{
@@ -14,10 +17,16 @@ const HooksConcepts =()=>{
             {/* <UseState/> */}
             {/* <UseEffect/> */}
             {/* <UseCallback/> */}
-            {/* UseMemo: */}
+     {/* UseMemo: */}
            {/* <UseMemo/>             */}
            {/* <ItemFilter/> */}
-           <FibanocciSeries/>
+           {/* <FibanocciSeries/> */}
+           {/* <UseContext/> */}
+           <ThemeProvider>
+            <UseContext/>
+
+           </ThemeProvider>
+          
         </View>
     )
 }
