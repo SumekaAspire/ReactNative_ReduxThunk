@@ -6,7 +6,7 @@
  */
 
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, ScrollView } from 'react-native';
 import {store} from './src/store/store';
 import { Provider } from 'react-redux';
 import Counter from './src/features/counter/Counter';
@@ -21,7 +21,10 @@ import AddPostForm from './src/appFeatures/posts/AddPostForm';
 import Networking from './src/component/Networking/Networking';
 import UseState from './src/component/Hooks/UseState';
 import HooksConcepts from './src/component/Hooks/HooksConcepts';
+import { fetchUsers } from './src/appFeatures/users/usersSlice';
 
+
+store.dispatch(fetchUsers());
 const App =() =>{
   return(
   //  <Provider store={store}>
@@ -35,13 +38,16 @@ const App =() =>{
   //<Profile /> //unit testing JEST
   //<PlatformModule /> //platform modules
 
-  // <Provider store={store}>
-  //   <AddPostForm/>
-  //   <PostsList/>
-  // </Provider>
+  <Provider store={store}>
+    <AddPostForm/>
+    <ScrollView>
+    <PostsList/>
+    </ScrollView>
+    
+  </Provider>
 
   //<Networking />
-  <HooksConcepts/>
+  // <HooksConcepts/>
   )
 }
 
