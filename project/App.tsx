@@ -22,6 +22,11 @@ import Networking from './src/component/Networking/Networking';
 import UseState from './src/component/Hooks/UseState';
 import HooksConcepts from './src/component/Hooks/HooksConcepts';
 import { fetchUsers } from './src/appFeatures/users/usersSlice';
+import IconElement from './src/ReactNativeElements/IconElement';
+import Icons from './src/ReactNativeElements/Icons';
+import Iconn from './src/ReactNativeElements/Icon';
+import ButtonExample from './src/ReactNativeElements/ButtonExample';
+import Badge from './src/ReactNativeElements/Badge';
 
 
 store.dispatch(fetchUsers());
@@ -38,16 +43,22 @@ const App =() =>{
   //<Profile /> //unit testing JEST
   //<PlatformModule /> //platform modules
 
-  <Provider store={store}>
-    <AddPostForm/>
-    <ScrollView>
-    <PostsList/>
-    </ScrollView>
+  // <Provider store={store}>
+  //   <AddPostForm/>
+  //   <ScrollView>
+  //   <PostsList/>
+  //   </ScrollView>
     
-  </Provider>
+  // </Provider>
 
   //<Networking />
-  // <HooksConcepts/>
+  
+//  <HooksConcepts/> 
+//  <IconElement/> 
+//<Icons/>
+//<Iconn/>
+// {/* <ButtonExample/> */}
+<Badge/>
   )
 }
 
